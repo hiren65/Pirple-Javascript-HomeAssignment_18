@@ -5,6 +5,11 @@
     <title>W3C Geolocation API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
 </head>
 <body>
        <div id="wrapper">
@@ -21,7 +26,9 @@
                     <label class="lb">
                         <span class="sp1">Enter Co-ordinates (Longitude) :</span>
                         <input type="number" id="num2" placeholder="co-ordinates"><br>
-                        <input type="button" id="Apply" name="Apply" value="Apply">
+                        <input type="button" id="findMap" name="Apply" value="Find Map">
+                        <br>
+                        <input type="button" id="Apply" name="Apply" value="Get Coordinate">
                     </label>
                     <div id="ans">
 
@@ -29,7 +36,7 @@
 
             </div>
             <div class="box" id="b3">
-
+                <div id="map" style="width: 100%; height: 400px; background: grey"></div>
             </div>
 
        </div>

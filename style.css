@@ -27,10 +27,7 @@ body{
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-
     background-size: contain;
-
-
 }
 
 h1{
@@ -38,7 +35,7 @@ h1{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    //border: 1px solid black;
+    font-size: 2.2rem;
     width: 90%;
     color: cornsilk;
 
@@ -90,4 +87,13 @@ span{
 }
 .sp3{
     color: darkblue;
+}
+#findMap{
+    width: 60%;
+    height: 35px;
+    background-color: darkblue;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+    margin-left: 10px;
 }

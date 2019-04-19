@@ -1,0 +1,71 @@
+html{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    font-size: 62.5%;
+    background-color: cornsilk;
+    border: 1px solid black;
+
+}
+body{
+    margin: 0;
+}
+#wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 200px auto auto;
+    grid-gap: 5px;
+
+}
+#b1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: darkslateblue;
+    background-image: url("img/logo.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-size: contain;
+
+
+}
+
+h1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    //border: 1px solid black;
+    width: 90%;
+    color: cornsilk;
+
+}
+.box{
+    background-color: lavender;
+
+}
+#b2{
+    margin: 5px;
+}
+h2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.lb{
+
+    margin: 5px 5px 20px 10px;
+    //margin-bottom: 10px;
+}
+#Apply{
+    width: 200px;
+    height: 35px;
+    background-color: darkblue;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}

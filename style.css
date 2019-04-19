@@ -59,13 +59,35 @@ h2{
 .lb{
 
     margin: 5px 5px 20px 10px;
+
     //margin-bottom: 10px;
 }
+#num1,#num2{
+    width: 40%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
 #Apply{
-    width: 200px;
+    width: 60%;
     height: 35px;
     background-color: darkblue;
     color: white;
     margin-top: 15px;
     cursor: pointer;
+    margin-left: 10px;
+}
+#ans{
+    margin: 10px;
+}
+span{
+    color: crimson;
+    font-size: 1.6rem;
+    margin: 10px;
+}
+.sp1{
+    width: 40%;
+    font-size: 1.5rem;
+}
+.sp3{
+    color: darkblue;
 }

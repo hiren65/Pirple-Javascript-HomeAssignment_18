@@ -124,6 +124,7 @@ span{
     color: crimson;
     font-size: 1.6rem;
     margin: 10px;
+
 }
 .sp1{
     width: 40%;
@@ -131,7 +132,10 @@ span{
 }
 
 .sp3{
+    display: inline-block;
     color: darkblue;
+    margin-bottom: 5px;
+
 }
 #findMap,#findMapLocation,#findPlaceDistance{
     width: 60%;
@@ -200,6 +204,11 @@ video{
     background-color: darkseagreen;
     margin-bottom: 10px;
     width: 70%;
+}
+
+.inputBox{
+    height: 20px;
+    background-color:lightcyan;
 }
 @media only screen and (max-width: 900px) {
     #b2{

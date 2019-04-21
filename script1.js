@@ -46,6 +46,7 @@ function initMap() {
         center: {lat:parseFloat(co_x1) , lng:parseFloat(co_y1) },
         zoom: 14
     });
+
     infoWindow = new google.maps.InfoWindow;
 
     // Try HTML5 geolocation.
@@ -60,6 +61,10 @@ function initMap() {
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
             map.setCenter(pos);
+            // The location of currentPlace
+            var currentPlace = {lat:parseFloat(co_x1), lng:parseFloat(co_y1) };
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({position: currentPlace, map: map});
         }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -67,6 +72,7 @@ function initMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
+
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -132,6 +138,14 @@ function createMarker(place) {
         map: map1,
         position: place.geometry.location
     });
+
+    let co_x1 = document.getElementById("num1").value;
+
+    let  co_y1 = document.getElementById("num2").value;
+    // The location of currentPlace
+    var currentPlace = {lat:parseFloat(co_x1), lng:parseFloat(co_y1) };
+    // The marker, positioned at Uluru
+    var marker11 = new google.maps.Marker({position: currentPlace, map: map1});
 
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.setContent(place.name);

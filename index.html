@@ -5,11 +5,7 @@
     <title>W3C Geolocation API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
 </head>
 <body>
        <div id="wrapper">
@@ -18,8 +14,12 @@
             </div>
             <div class="box" id="b2">
                 <h2>Enter Geo-location Co-ordinates</h2>
+                <div id="ans">
 
+                </div>
                     <label class="lb">
+                        <input type="button" id="Apply" name="Apply" value="Get Coordinate">
+                        <br><br>
                         <span class="sp1">Enter Co-ordinates (Latitude) :</span>
                         <input type="number" id="num1" placeholder="co-ordinates">
                     </label><br><br>
@@ -28,20 +28,30 @@
                         <input type="number" id="num2" placeholder="co-ordinates"><br>
                         <input type="button" id="findMap" name="Apply" value="Find Map">
                         <br>
-                        <input type="button" id="Apply" name="Apply" value="Get Coordinate">
-                    </label>
-                    <div id="ans">
+                        <span class="sp1">Enter Places to be Found :</span>
+                        <input type="text" id="text1" placeholder="address">
+                        <input type="button" id="findMapLocation" name="Find Location" value="Find Location">
+                        <br>
+                        <span class="sp1">Find Distance :</span>
+                        <br>
+                        <!--<input type="text" id="text2" placeholder="address">-->
+                        <input type="button" id="findPlaceDistance" name="Find Location" value="Find Direction">
 
-                    </div>
+                    </label>
+
 
             </div>
             <div class="box" id="b3">
-                <div id="map" style="width: 100%; height: 400px; background: grey"></div>
+                <div id="map" ></div>
             </div>
 
        </div>
        <footer>
-           <script type="text/javascript" src="script.js"></script>
+           <script type="text/javascript" src="script1.js"></script>
+           <script async defer
+                   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv5jZ3NytCMHfWgY7uZsnsJE9wByVaNDY&callback=initMap&libraries=places&callback=initMap1&callback=initMap2">
+           </script>
+           <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv5jZ3NytCMHfWgY7uZsnsJE9wByVaNDY&libraries=places&callback=initMap1" async defer></script>-->
        </footer>
 
 </body>

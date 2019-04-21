@@ -43,6 +43,8 @@ let findMap = document.getElementById("findMap");
 findMap.addEventListener("click",locator);
 function locator() {
     moveMapToBerlin(map);
+    createMarker();
+
 }
 
 
@@ -79,3 +81,25 @@ var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 var ui = H.ui.UI.createDefault(map, defaultLayers);
 /*// Now use the map as required...
 moveMapToBerlin(map);*/
+///////////////////
+// Create a map:
+
+function createMarker() {
+    // Define a variable holding SVG mark-up that defines an icon image:
+    var svgMarkup = '<svg width="24" height="24" ' +
+        'xmlns="http://www.w3.org/2000/svg">' +
+        '<rect stroke="white" fill="#1b468d" x="1" y="1" width="22" ' +
+        'height="22" /><text x="12" y="18" font-size="12pt" ' +
+        'font-family="Arial" font-weight="bold" text-anchor="middle" ' +
+        'fill="white">0</text></svg>';
+
+// Create an icon, an object holding the latitude and longitude, and a marker:
+    var icon = new H.map.Icon(svgMarkup),
+        coords = {lat: co_x, lng: co_y},
+        marker = new H.map.Marker(coords, {icon: icon});
+
+// Add the marker to the map and center the map at the location of the marker:
+    map.addObject(marker);
+    map.setCenter(coords);
+}
+//////////////////

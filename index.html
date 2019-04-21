@@ -20,13 +20,16 @@
                     <label class="lb">
                         <input type="button" id="Apply" name="Apply" value="Get Coordinate">
                         <br><br>
-                        <span class="sp1">Enter Co-ordinates (Latitude) :</span>
-                        <input type="number" id="num1" placeholder="co-ordinates">
+
                     </label><br><br>
                     <label class="lb">
-                        <span class="sp1">Enter Co-ordinates (Longitude) :</span>
+                        <div id="getCoDiv">
+                            <label class="label">Enter Co-ordinates (Latitude) :</label>
+                            <input type="number" id="num1" placeholder="co-ordinates"><br>
+                        <label class="label">Enter Co-ordinates (Longitude) :</label>
                         <input type="number" id="num2" placeholder="co-ordinates"><br>
                         <input type="button" id="findMap" name="Apply" value="Find Map">
+                        </div>
                         <br>
                         <span class="sp1">Enter Places to be Found :</span>
                         <input type="text" id="text1" placeholder="address">
@@ -35,6 +38,13 @@
                         <span class="sp1">Find Distance :</span>
                         <br>
                         <!--<input type="text" id="text2" placeholder="address">-->
+                        <div id="internalDiv">
+                            <label class="label">Address A</label>
+                            <input type="text" class="txt1" id="text01" placeholder="Point A address"><br>
+                            <label class="label">Address B</label>
+                            <input type="text" class="txt1" id="text02" placeholder="Point B address">
+                        </div>
+
                         <input type="button" id="findPlaceDistance" name="Find Location" value="Find Direction">
 
                     </label>

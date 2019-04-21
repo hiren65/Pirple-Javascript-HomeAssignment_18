@@ -25,6 +25,8 @@ function showPosition(position) {
         "<br><span>Longitude:</span>  " + "<span class='sp3'> " + position.coords.longitude +"</span>";
     document.getElementById("num1").value = position.coords.latitude;
     document.getElementById("num2").value = position.coords.longitude;
+    document.getElementById("text01").value = position.coords.latitude +","+position.coords.longitude;
+    //let d2 = document.getElementById("text02").value;
 
 }
 
@@ -92,6 +94,8 @@ function initMap1() {
 
     let findPlace = document.getElementById("text1").value;
 
+    document.getElementById("text02").value = findPlace;
+
     if (co_x1 === "" && co_y1 === ""){
         return;
     }
@@ -140,6 +144,12 @@ var findDistance = document.getElementById("findPlaceDistance");
 
 findDistance.addEventListener("click",initMap2);
 function initMap2() {
+    let d1 = document.getElementById("text01").value;
+    let d2 = document.getElementById("text02").value;
+    if (d1 === "" || d2 === ""){
+        return;
+    }
+
     var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
     var map33 = new google.maps.Map(document.getElementById('map'), {
@@ -156,8 +166,8 @@ function initMap2() {
 }
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     directionsService.route({
-        origin: "Toongabbie station",
-        destination: "Toongabbie library",
+        origin: document.getElementById("text01").value,
+        destination: document.getElementById("text02").value,
         travelMode: 'DRIVING'
     }, function(response, status) {
         if (status === 'OK') {

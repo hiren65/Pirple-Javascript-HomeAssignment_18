@@ -197,7 +197,7 @@ h3{
     font-size: 1.7rem;
     color: darkslateblue;
 }
-video{
+.video-holder{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -205,7 +205,12 @@ video{
     margin-bottom: 10px;
     width: 70%;
 }
+iframe{
+    display: block;
+    margin: auto;
+    width: 100%;
 
+}
 .inputBox{
     height: 20px;
     background-color:lightcyan;

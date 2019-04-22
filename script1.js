@@ -12,7 +12,12 @@ function findLocation() {
 }
 
 let xx = document.getElementById("ans");
+// Note: This example requires that you consent to location sharing when
+// prompted by your browser. If you see the error "The Geolocation service
+// failed.", it means you probably did not give permission for the browser to
+// locate you.
 function geolocationShow(longitude,latitude) {
+    // prior permission of browser "Allow" required
     if (navigator.geolocation){
         navigator.geolocation.getCurrentPosition(showPosition)
     } else{
@@ -30,13 +35,11 @@ function showPosition(position) {
 
 }
 
+////////////////////////////////
 let findMap = document.getElementById("findMap");
 findMap.addEventListener("click",initMap);
 
-// Note: This example requires that you consent to location sharing when
-// prompted by your browser. If you see the error "The Geolocation service
-// failed.", it means you probably did not give permission for the browser to
-// locate you.
+
 var map, infoWindow;
 function initMap() {
     let co_x1 = document.getElementById("num1").value;
